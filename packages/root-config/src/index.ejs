@@ -34,7 +34,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -47,8 +49,12 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@ventas/root-config": "//localhost:9000/ventas-root-config.js"
+        "@ventas/root-config": "//localhost:9000/ventas-root-config.js",
+        "@ventas/clientes": "http://localhost:9001/ventas-clientes.js",
+        "@ventas/facturar": "http://localhost:9002/ventas-facturar.js",
+        "@ventas/menu": "http://localhost:9003/ventas-menu.js",
+        "@ventas/productos": "http://localhost:9004/ventas-productos.js",
+        "@ventas/styleguide": "http://localhost:9004/ventas-styleguide.js"
       }
     }
   </script>
