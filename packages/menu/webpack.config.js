@@ -10,6 +10,14 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    devServer:{
+      port:9003,
+      https:Boolean(procces.env.HTTPS)
+    },
+    externals:[/^@ventas\//],
+    output:{
+      path: path.resolve(__dirname, 'dist'),
+      filename: "main.js"
+    }
   });
 };
