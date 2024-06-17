@@ -1,5 +1,6 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
+const path = require("path");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
@@ -12,7 +13,7 @@ module.exports = (webpackConfigEnv, argv) => {
   return merge(defaultConfig, {
     devServer:{
       port:9004,
-      https:Boolean(procces.env.HTTPS)
+      https:Boolean(process.env.HTTPS)
     },
     externals:[/^@ventas\//],
     output:{

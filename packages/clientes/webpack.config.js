@@ -13,7 +13,7 @@ module.exports = (webpackConfigEnv, argv) => {
   return merge(defaultConfig, {
     devServer:{
       port:9001,
-      https:Boolean(procces.env.HTTPS)
+      https:Boolean(process.env.HTTPS)
     },
     externals:[/^@ventas\//],
     output:{
