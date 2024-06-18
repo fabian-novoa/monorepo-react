@@ -1,3 +1,3 @@
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return <section className="bg-white" >{props.name} prueba de estilo!</section>;
 }
