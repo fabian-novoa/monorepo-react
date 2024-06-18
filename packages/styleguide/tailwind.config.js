@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    '../../node_modules/@ventas/facturar/src/**/*.{js,ts,tsx,jsx}'
+  ],
   theme: {
     extend: {},
   },
