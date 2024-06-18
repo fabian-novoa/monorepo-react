@@ -23,7 +23,7 @@ const apps= {
         value: appName
       }))
       ,
-      hint: '- Seleccionar con barra espaciadora y Enter'
+      hint: '- Seleccionar con barra espaciadora y Enter',
     }
   ]);
 
@@ -32,13 +32,12 @@ const apps= {
     process.exit();
    }
 
-   const iniciarProceso= spawn(
-    /^win/.test(process.platform) ? 'lerna.cmd' : 'lerna',
+   const iniciarProceso= spawn(/^win/.test(process.platform) ? 'lerna.cmd' : 'lerna',
     [
-      "run",
+    "run",
     "start",
     "--scope",
-    `'*/{root-config, styleguide, ${appSeleccionadas.join(",")}}'`,
+    `*/*{root-config,styleguide,${appSeleccionadas.join(",")}}*`,
     "--stream",
     "--parallel",
   ],
