@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "node scripts/start.js"
+    "start": "node scripts/start.js",
+    "arquitectura": "node ./scripts/arquitectura.js"
   },
   "workspaces": [
     "packages/*"
